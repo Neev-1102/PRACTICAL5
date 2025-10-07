@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student & Event Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Student & Event Viewer</h1>
+    <p>Discover student profiles, upcoming events, and more!</p>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="students-heading">
+      <h2 id="students-heading">Student Profiles</h2>
+      <div id="student-list" class="card-container"></div>
+      <div id="student-pagination" class="pagination"></div>
+    </section>
+
+    <section class="section" aria-labelledby="events-heading">
+      <h2 id="events-heading">Event List</h2>
+      <div id="event-list" class="card-container"></div>
+      <div id="event-pagination" class="pagination"></div>
+    </section>
+
+    <section class="section" aria-labelledby="captcha-heading">
+      <h2 id="captcha-heading">Custom CAPTCHA</h2>
+      <canvas id="captchaCanvas" width="150" height="50"></canvas>
+      <div style="text-align:center;">
+        <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" aria-label="Enter CAPTCHA"/>
+        <button onclick="verifyCaptcha()">Verify</button>
+      </div>
+      <p id="captchaResult"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
